@@ -19,5 +19,5 @@ PLATFORMS
 
 DEPENDENCIES
   bifubao!
-  bundler
-  rake
+  bundler (~> 1)
+  rake (~> 10)
