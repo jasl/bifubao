@@ -1,0 +1,14 @@
+.DS_Store
+
+*.sw[op]
+*~
+.project
+/TAGS
+
+.idea
+
+capybara-*.html
+.rspec
+/coverage/
+
+.vagrant
