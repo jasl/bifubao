@@ -4,7 +4,7 @@ require 'bifubao/version'
 require 'bifubao/utils'
 require 'bifubao/sign'
 
-require 'bifubao/service'
+require 'bifubao/sdk'
 
 module Bifubao
   class << self

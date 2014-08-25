@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Bifubao::ServiceTest < Test::Unit::TestCase
+class Bifubao::SDKTest < Test::Unit::TestCase
   def test_create_external
     options = {
         external_order_id: SecureRandom.uuid,
@@ -9,7 +9,7 @@ class Bifubao::ServiceTest < Test::Unit::TestCase
     }
 
     assert_nothing_raised do
-      Bifubao::Service.create_external(options)
+      Bifubao::SDK.create_external(options)
     end
   end
 
@@ -22,7 +22,7 @@ class Bifubao::ServiceTest < Test::Unit::TestCase
     }
 
     assert_raise RuntimeError do
-      Bifubao::Service.create_external(options)
+      Bifubao::SDK.create_external(options)
     end
   end
 end
