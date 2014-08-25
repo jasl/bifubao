@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bifubao (0.0.1)
+    bifubao (0.0.2)
       rest-client (~> 1)
 
 GEM

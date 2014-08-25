@@ -19,8 +19,12 @@ module Bifubao
       Base64.encode64(Bifubao.private_key.sign(OpenSSL::Digest::SHA1.new, to_sign_data(params)))
     end
 
-    def self.verify_from_sdk?(params)
-      sign = params.delete(:'_signature_')
+    def self.generate_merchant_api_sign(params)
+      Digest::MD5.hexdigest(to_sign_data(params) + Bifubao.key)
+    end
+
+    def self.verify?(params)
+      sign = params.delete(:'_signature_') || params.delete(:'_signature_sha1_')
 
       Bifubao::OFFICIAL_PUBLIC_KEY.verify(OpenSSL::Digest::SHA1.new, Base64.decode64(sign), to_sign_data(params))
     end

@@ -5,11 +5,15 @@ require 'bifubao/utils'
 require 'bifubao/sign'
 
 require 'bifubao/sdk'
+require 'bifubao/merchant'
 
 module Bifubao
   class << self
     attr_accessor :private_key
     attr_accessor :app_hash_id
+
+    attr_accessor :pid
+    attr_accessor :key
 
     OFFICIAL_PUBLIC_KEY_PEM = "-----BEGIN PUBLIC KEY-----\n" +
         "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUSnx8dqJ0UC0jvFTEdL\n" +
